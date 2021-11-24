@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smiles</title>
+  <style media="screen">
+  .smile1 {
+    width: 160px;
+    height: 160px;
+    display: block;
+    position: relative;
+    background: url("images/80_160.png");
+    background-position:top 0 left -10px;
+    animation: emoji 2s steps(1) infinite;
+  }
+  .smile2 {
+    width: 160px;
+    height: 160px;
+    display: block;
+    position: relative;
+    top: -160px;
+    left: 200px;
+    background: url("images/80_160.png");
+    background-position:top 400px left -10px;
+    animation: emoji2 2s steps(1) infinite;
+  }
+  .shake {
+    width: 160px;
+    height: 160px;
+    display: block;
+    position: relative;
+    top: -320px;
+    left: 400px;
+    background: url("images/80_160.png");
+    background-position:top 640px left 0;
+    animation: shake .4s steps(1) infinite;
+  }
+  .mixed {
+    width: 160px;
+    height: 160px;
+    display: block;
+    position: relative;
+    top: -480px;
+    left: 600px;
+    background: url("images/80_160.png");
+    background-position: top -240px left 880px;
+  }
+  .mixed:hover {
+    background-position: top -240px left 640px;
+    animation: shake1 .4s steps(1) infinite;
+  }
+  .tears {
+    width: 160px;
+    height: 160px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 800px;
+    background:url("images/tears.png");
+    background-position: 0 0;
+  }
+  .tears1 {
+    width: 160px;
+    height: 160px;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    background:url("images/tears.png");
+    background-position: right 160px;
+    animation: cry .5s steps(1) infinite;
+  }
+
+  @keyframes emoji {
+    0% {background-position: top 0 left -10px;}
+    25% {background-position: top 0 left -250px;}
+    50% {background-position: top 0 left -490px;}
+    75% {background-position: top -240px left 3px; }
+  }
+  @keyframes emoji2 {
+    0% {background-position: top 400px left -10px;}
+    25% {background-position: top 400px left -240px;}
+    50% {background-position: top 400px left -480px;}
+    75% {background-position: top 400px left -720px; }
+  }
+@keyframes shake {
+  0%, 50% {top: -320px;}
+  25% {top: -290px;}
+  75% {top: -300px;}
+  100% {top: -270px;}
+}
+@keyframes shake1 {
+  0%, 50% {top: -480px;}
+  25% {top: -440px;}
+  75% {top: -450px;}
+  100% {top: -420px;}
+}
+@keyframes cry {
+  0% {top: 0;}
+  50% {top:30px;}
+  100% {top: 60px;}
+}
+</style>
+</head>
+<body>
+  <div class="smile1"></div>
+  <div class="smile2"></div>
+  <div class="shake"></div>
+  <div class="mixed"></div>
+  <div class="tears">
+    <div class="tears1"></div>
+  </div>
+
+</body>
+</html>
